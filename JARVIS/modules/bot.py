@@ -1,5 +1,5 @@
 ## Copy Paster Must Give Credit...
-## @JARVIS_V2
+## @Greatperson_xd
 
 import sys
 import heroku3
@@ -10,7 +10,7 @@ from telethon.tl.functions.channels import GetParticipantsRequest
 from telethon.tl.types import ChannelParticipantsSearch
 from config import X1, OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, CMD_HNDLR as hl
 
-REQUIRED_CHANNELS = ["JARVIS_V_SUPPORT", "Dora_Hub"]
+REQUIRED_CHANNELS = ["The_incricible", "incricible"]
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 async def ping(event):
@@ -19,7 +19,7 @@ async def ping(event):
         reply_message = await event.reply("❄️")
         end = datetime.now()
         ping_time = (end - start).microseconds / 1000
-        await reply_message.edit(f"[𝐉𝐀𝐑𝐕𝐈𝐒 𝐈𝐒 𝐑𝐄𝐀𝐃𝐘 𝐓𝐎 𝐅𝐔𝐂𝐊 𝐇𝐀𝐓𝐄𝐑𝐒 🥀](https://t.me/JARVIS_V_SUPPORT)🤖\n» `{ping_time} ᴍꜱ`")
+        await reply_message.edit(f"[𝐆𝐑𝐄𝐀𝐓𝐏𝐄𝐑𝐒𝐎𝐍 𝐈𝐒 𝐑𝐄𝐀𝐃𝐘 𝐓𝐎 𝐅𝐔𝐂𝐊 𝐇𝐀𝐓𝐄𝐑𝐒 🥀](https://t.me/greatperson_xd)🤖\n» `{ping_time} ᴍꜱ`")
     else:
         await prompt_join_channels(event)
 
@@ -40,7 +40,7 @@ async def addsudo(event):
     if event.sender_id == OWNER_ID:
         await manage_sudo_users(event, add=True)
     elif event.sender_id in SUDO_USERS:
-        await event.reply("ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ᴀᴅᴅ sᴜᴅᴏ ᴜsᴇʀs ᴏʀ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ʙʏ .ɢᴇᴛsᴜᴅᴏ")
+        await event.reply("ᴏɴʟʏ ɢʀᴇᴀᴛᴘᴇʀsᴏɴ ᴄᴀɴ ᴀᴅᴅ sᴜᴅᴏ ᴜsᴇʀs ᴏʀ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ʙʏ .ɢᴇᴛsᴜᴅᴏ")
     else:
         await prompt_join_channels(event)
 
@@ -49,7 +49,7 @@ async def removesudo(event):
     if event.sender_id == OWNER_ID:
         await manage_sudo_users(event, add=False)
     else:
-        await event.reply("ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ʀᴇᴍᴏᴠᴇ sᴜᴅᴏ ᴜsᴇʀs")
+        await event.reply("ᴏɴʟʏ ɢʀᴇᴀᴛᴘᴇʀsᴏɴ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ sᴜᴅᴏ ᴜsᴇʀs")
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%ssudos(?: |$)(.*)" % hl))
 async def show_sudo_users(event):
@@ -57,14 +57,14 @@ async def show_sudo_users(event):
         sudo_users_list = "sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ:\n" + "\n".join(f"- {user_id}" for user_id in SUDO_USERS)
         await event.reply(sudo_users_list)
     else:
-        await event.reply("ᴛʜɪs ғᴜɴᴄᴛɪᴏɴ ᴄᴀɴ ᴏɴʟʏ ᴘᴇʀғᴏʀᴍ ʙʏ ᴊᴀʀᴠɪs")
+        await event.reply("ᴛʜɪs ғᴜɴᴄᴛɪᴏɴ ᴄᴀɴ ᴏɴʟʏ ᴘᴇʀғᴏʀᴍ ʙʏ ɢʀᴇᴀᴛᴘᴇʀsᴏɴ")
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%saddmultisudo(?: |$)(.*)" % hl))
 async def addmultisudo(event):
     if event.sender_id == OWNER_ID:
         await manage_multiple_sudo_users(event)
     elif event.sender_id in SUDO_USERS:
-        await event.reply("ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ᴀᴅᴅ ᴍᴜʟᴛɪsᴜᴅᴏ ᴜsᴇʀs ᴀᴛ ᴀ ᴛɪᴍᴇ.")
+        await event.reply("ᴏɴʟʏ ɢʀᴇᴀᴛᴘᴇʀsᴏɴ ᴄᴀɴ ᴀᴅᴅ ᴍᴜʟᴛɪsᴜᴅᴏ ᴜsᴇʀs ᴀᴛ ᴀ ᴛɪᴍᴇ.")
     else:
         await prompt_join_channels(event)
 
@@ -148,8 +148,8 @@ async def manage_multiple_sudo_users(event):
 
 async def prompt_join_channels(event):
     buttons = [
-        [Button.url("ᴊᴀʀᴠɪs sᴜᴘᴘᴏʀᴛ", "https://t.me/JARVIS_V_SUPPORT")],
-        [Button.url("sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", "https://t.me/Dora_Hub")],
+        [Button.url("ᴊᴀʀᴠɪs sᴜᴘᴘᴏʀᴛ", "https://t.me/The_Incricible")],
+        [Button.url("sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", "https://t.me/Incricible")],
         [Button.inline("ᴠᴇʀɪғʏ ✅", b"verify_membership")]
     ]
     await event.reply("ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ, ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ᴠᴀʀs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ:", buttons=buttons)
