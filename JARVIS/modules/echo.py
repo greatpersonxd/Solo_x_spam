@@ -1,5 +1,5 @@
 ## Copy Paster Must Give Credit...
-## @JARVIS_V2
+## @Greatperson_xd
 
 import asyncio
 import base64
